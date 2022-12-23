@@ -1,0 +1,16 @@
+div h5{
+    color:pink;
+}
+div > h1{
+    background-color: antiquewhite;
+}
+div + p {
+    background-color: yellow;
+  }
+  div ~ h6 {
+    background-color: yellow;
+  }
+  .pad{
+    border: 1px dotted greenyellow;
+    
+  }

@@ -1,0 +1,31 @@
+.tran{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    transition: width 1s, height 1s , transform 1s;
+}
+.tran:hover{
+    width: 500px;
+    height: 500px;
+    transform: rotate(-180deg);
+    background-color: orangered;
+}
+.key{
+    height: 20px;
+    width: 50px;
+    background-color:red;
+    animation-name: annimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+
+}
+@keyframes annimation{
+/* from{   background-color:red;}
+to{   background-color:aqua;} */
+0% {background-color: antiquewhite; height: 100px;width: 100px;}
+10%{background-color: aqua; height: 200px;width: 200px;}
+30%{background-color: blue;  height: 400px;width: 400px;}
+50%{background-color: brown;}
+100%{background-color: chartreuse;}
+}

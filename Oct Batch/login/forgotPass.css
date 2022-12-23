@@ -1,0 +1,19 @@
+.formcontainer{
+    border: 1px dotted blue;
+    position: relative;
+    width: 400px;
+    height: 200;
+    padding: 17px;
+    text-align: center;
+    background-color: palegreen
+}
+.butn{
+    background-color: green;
+    color: azure;
+    background-color: green;
+    color: azure;
+    width: 90px;
+    height: 30px;
+    top: 10;
+    position: relative;
+}

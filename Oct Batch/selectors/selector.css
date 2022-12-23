@@ -1,0 +1,126 @@
+p{
+    color: blue;
+    font-size: 20px;
+}
+#headerTag{
+   color: red; 
+}
+.main{
+    color: aqua;
+}
+/* universal selector  */
+/* *{
+    color: pink;
+    font-size: 30px;
+} */
+h3,h4{
+    color: brown;
+}
+.main1{
+color: pink;
+}
+
+ /* selector:pseudo-class {
+    property: value;
+  } */
+p.main1:hover{
+    color: green;
+}
+.main2{
+    display: block;
+    background-color: yellow;
+    padding: 20px;
+}
+.main3{
+    display: inline-block;
+    background-color: pink;
+    padding: 20px;
+}
+
+.main4{
+display: none;
+background-color: brown;
+}
+div.main5:hover span{
+display: inline-block;
+} 
+
+.hd1{
+    background-color: aqua
+}
+h1.hd1:active{
+    background-color: blueviolet;
+}
+input:checked{
+    height: 50px;
+    width: 50px;
+}
+input[type=text]:focus{
+background-color: rgb(244, 235, 232);
+color: black;
+border: 2px solid red;
+}
+.fcs{
+    /* background-color: rgb(32, 233, 26); */
+    color:black;
+}
+div.fcs input[type=text]:focus{
+    background-color: antiquewhite;
+    color: brown;
+}
+div.fcs input:disabled{
+    background-color: pink;
+}
+
+/* pseudo ele */
+.pseudo{
+    color: pink;
+}
+p.pseudo::first-letter{
+    font-size: 50px;
+    color: blue;
+}
+.pseudo2{
+    color : red
+}
+h1.pseudo2::first-line{
+    color: aqua;
+}
+.pseudo3{
+    color: chartreuse; 
+}
+
+h3.pseudo3::before{
+        content:"*" ;
+        font-size: 10px;
+}
+.pseudo4{
+color: blueviolet;
+}
+div.pseudo4::after{
+    content:"@" ;
+}
+.pseudo5{
+    color: blueviolet;
+}
+div.pseudo5::selection{
+    color: chartreuse;
+    background-color: cadetblue;
+}
+.maincontainer{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+
+.childcon3{
+    word-wrap: break-word;
+    font-family: fantasy;
+    color: black;
+}
+.childcontainer2{
+    color: blue;
+    font-size: 20px;
+  
+}

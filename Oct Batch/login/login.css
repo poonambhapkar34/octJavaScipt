@@ -1,0 +1,67 @@
+.container{
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    margin-top: 26px;
+    margin-left: 200px;
+    position: relative;
+  
+}
+.title{
+    margin-left: 350px;
+}
+
+input[type=text], input[type=password] {
+    width:100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.main{
+    margin-left: 15px;
+    position: absolute;
+    top: 10px;
+}
+.btn{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+.btn:hover {
+   opacity: 0.8;  /* 0-1 */
+  }
+  .footer{
+    background-color: #f1f1f1;
+    height: 100px;
+    width: 440px;
+    padding: 10px;
+  }
+  .canclebtn{
+    background-color: red;
+    border: none;
+    position: absolute;
+    top: 263px;
+    height: 34px;
+    width: 92px;
+  }
+  .forgotpsw{
+    float: right;
+    margin-top: 37px;
+  }
+  .containermain{
+    height:100%;
+    width: 100%;
+    border: 1px solid black;
+    position: relative;
+  }
+
+  .sidebar{
+    background-color:palevioletred;
+    height: 100%;
+    width: 150px;
+    position: absolute;
+  }
