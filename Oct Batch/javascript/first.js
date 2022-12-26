@@ -4,7 +4,7 @@ let b = 10; //declaration + defination
 let a;  //declaration
 a = 10; //defination
 let c=50,d=30,t=80;
-
+let p= 'poonam'
 console.log('c',c);
 console.log(d,'d');
 let name1 = "poonam";
