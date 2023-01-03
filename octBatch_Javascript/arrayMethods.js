@@ -6,10 +6,11 @@ emp = [
     {firstName : 'Raj1', lastName : "Patil1", age:50},
 ]
 
-// let data = emp.filter((element)=>{
-//   return  element.age == 50;
-// })
-// console.log(data);
+let data = emp.filter((element)=>{ 
+    //return  element.age == 50;
+  return  element.age == 50 && element.firstName == 'Raj1';
+})
+console.log("data",data);
 
 console.log(emp[1].firstName);
 let newData =[];
