@@ -1,6 +1,8 @@
 <script src="regex.js"></script>
 <form >
-    <!-- [a-zA-Z@$%&]{3} -->
-    <input type="text" pattern="[a-z0-9@.]*$" maxlength="10"> password
+    <!-- [a-zA-Z@$%&]{3} [a-z0-9@.]{3}[0-9]{7}-->
+    <!-- <input type="text" pattern="^[a-zA-Z@$%&]{3}*$" maxlength="10"> password -->
+    <!-- <input type="text" pattern="[a-zA-Z@$%&]{3}[0-6]{2}" maxlength="5"> password -->
+    <input type="text" pattern="^[a-zA-Z]{2,5}[0-6]{3,5}+$" maxlength="10"> password
     <button>submit</button>
 </form>
