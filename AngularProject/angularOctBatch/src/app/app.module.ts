@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginformComponent } from './loginform/loginform.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginformComponent
+    LoginformComponent,
+  
   ],
   imports: [
     BrowserModule,
