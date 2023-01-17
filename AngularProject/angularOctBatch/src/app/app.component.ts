@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'angularOctBatch';
   name:string = 'poonam';
   middleName:any = 'Abhijit';
+  fruit :any;
 
    constructor(){
     console.log('i am inside constructor');
@@ -27,6 +28,7 @@ export class AppComponent {
     console.log('---->',this.name);
     this.mySecondFun();
     console.log(surname);
+    this.fruit = 'mango'
     
   }
 
