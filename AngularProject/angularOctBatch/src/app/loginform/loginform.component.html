@@ -1,3 +1,26 @@
 <p>loginform works!</p>
 <h1 id="kkk">aaaaaaaaaaaaaaa</h1>
 <input type="text" #inpBox (keyup)="keyUpEvent($event,inpBox)">
+<br>
+<!--  interpolation  -->
+<!--syntax: {{}} , {{property/function()}} interpolation-->
+<h1>{{car}}</h1>
+{{car}} 
+{{ getData(20)}}
+
+<!-- we can also do arithmatic operations with interpolation -->
+<h1>{{num == 200}}</h1>
+ {{num == 200}}
+{{booleanProperty}}
+
+<!-- we can not assign value with interpolation-->
+<!-- {{num = 300}}  -->
+<!-- we can not use type of property with interpolation -->
+<!-- {{typeof(num)}} -->
+<!--we can not inc/dcr operators with interpolation  -->
+<!-- {{num--}} -->
+<!-- obj  interpolation -->
+{{student.name}}
+<!-- array  interpolation -->
+{{items}} <br>
+{{items[2]}}
