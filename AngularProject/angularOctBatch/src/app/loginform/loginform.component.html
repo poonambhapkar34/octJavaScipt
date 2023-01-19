@@ -24,3 +24,13 @@
 <!-- array  interpolation -->
 {{items}} <br>
 {{items[2]}}
+
+<!--One way DB techniques : 1.string Interpollation{{}} 2. property binding []-->
+<form>
+name1: <input type="text" value = "poonam">
+name2 : <input type="text" [value] = "myName">  <!-- propertyBind: [attribute] -->
+name3: <input type="text" value = {{myName}}>  <!-- Interpollation: {{property}} -->
+name : <input type="text" [value] = "myName" disabled >
+name4: <input type="text"  [disabled] = "disableFlag"> <!--propertyBinding can handle disable attribute -->
+name5: <input type="text" disabled = {{disableFlag}}> <!--Interpollation can not handle disable attribute -->
+</form>
