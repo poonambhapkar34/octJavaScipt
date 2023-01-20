@@ -24,13 +24,19 @@
 <!-- array  interpolation -->
 {{items}} <br>
 {{items[2]}}
-
+<!-- data binding - 1.oneway databinding 2.twoway db -->
 <!--One way DB techniques : 1.string Interpollation{{}} 2. property binding []-->
 <form>
-name1: <input type="text" value = "poonam">
-name2 : <input type="text" [value] = "myName">  <!-- propertyBind: [attribute] -->
-name3: <input type="text" value = {{myName}}>  <!-- Interpollation: {{property}} -->
-name : <input type="text" [value] = "myName" disabled >
-name4: <input type="text"  [disabled] = "disableFlag"> <!--propertyBinding can handle disable attribute -->
-name5: <input type="text" disabled = {{disableFlag}}> <!--Interpollation can not handle disable attribute -->
+name1: <input type="text" value = "poonam"><br>
+name2 : <input type="text" [value] = "myName"> <br> <!-- propertyBind: [attribute] -->
+name3: <input type="text" value = {{myName}}> <br> <!-- Interpollation: {{property}} -->
+name : <input type="text" [value] = "myName" disabled ><br>
+name4: <input type="text"  [disabled] = "disableFlag"><br> <!--propertyBinding can handle disable attribute -->
+name5: <input type="text" disabled = {{disableFlag}}><br> <!--Interpollation can not handle disable attribute -->
 </form>
+
+<!-- two way db [(ngModel)]-->
+<h2>Two Way bata binding</h2><br>
+<input type="text" [(ngModel)] = "mySurname"><br><br>
+ {{mySurname}} <!--to see data  -->
+<button (click)="ngModelChanges()">click me</button><br><br><br><br><br><br><br><br>

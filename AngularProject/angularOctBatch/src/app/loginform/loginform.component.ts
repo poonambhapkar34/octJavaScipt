@@ -17,11 +17,11 @@ export class LoginformComponent {
   }
   items = [10, 20, 30, 40];
   // myName :string = 'poonam patil'; //static data
-  myName: string = this.student.name; //dynamic data
+  myName : any = this.student.name; //dynamic data
   disableFlag: boolean = false;
+  mySurname : string = 'patil';
 
-
-  keyUpEvent(data: any, inpBoxValue: any) {
+  keyUpEvent(data: any, inpBoxValue: any):any {
     console.log(data);
     console.log(data.target.value);
     console.log(inpBoxValue);
@@ -32,5 +32,9 @@ export class LoginformComponent {
   getData(b: any) {
     //  let a =20;
     return 'i live in pune';
+  }
+  ngModelChanges(){
+    console.log("this.mySurname",this.mySurname);
+    this.mySurname = 'Bhapkar';
   }
 }
