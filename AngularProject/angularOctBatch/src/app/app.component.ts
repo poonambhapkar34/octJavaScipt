@@ -7,33 +7,31 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'angularOctBatch';
-  name:string = 'poonam';
-  middleName:any = 'Abhijit';
-  fruit :any;
+ public title = 'angularOctBatch';
+ public name:string = 'poonam';
+        middleName:any = 'Abhijit';
+        fruit :any;
 
-   constructor(){
+  constructor() {
     console.log('i am inside constructor');
-    
-    // let xyz= 'kkk';
-    // this.middleName = 'Abhijit';
-   }
+  }
  // const surname :string = 'patil'; var /property both are same..
  //only differnce is we can not add prefix let/var /const to the property
 
-  myFirstFunction(): any{
+ public myFirstFunction(): any{
     console.log('welcome');
     let surname :string = 'patil';
     this.name = 'Raj';
     console.log('---->',this.name);
     this.mySecondFun();
     console.log(surname);
-    this.fruit = 'mango'
+    this.fruit = 'mango';
+    this.middleName = 600;
     
   }
 
   mySecondFun(){
-    this.middleName = 100;
+    this.middleName = 100.33;
     console.log(this.middleName);
     
   }
