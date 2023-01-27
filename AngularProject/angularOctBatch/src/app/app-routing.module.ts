@@ -5,7 +5,7 @@ import { LoginformComponent } from './loginform/loginform.component';
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 
 const routes: Routes = [
-   {path : '', component : LandingComponent},
+  {path : '', component : LandingComponent},
   {path : 'loginform' , component : LoginformComponent},
   {path : 'studentLogin' , component : StudentloginComponent},
   {path : 'landing' , component: LandingComponent}

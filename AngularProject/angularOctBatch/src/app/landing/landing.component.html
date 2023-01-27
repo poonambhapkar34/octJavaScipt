@@ -1,4 +1,9 @@
 <p>landing works!</p>
 
-<a routerLink = "/loginform" >click here to go on loginform..</a>
-<button routerLink = "/studentLogin" >click here </button>
+<a routerLink = "/loginform" > click here to go on loginform.. </a><br><br>
+<button routerLink = "/studentLogin" >click here </button> <br><br>
+ <a href="/loginform"> click </a>   <!--never use this in angular application,application got refreshed here -->
+<br><br>
+<button (click)="routing('poonam')">click to navigate</button><br><br>
+
+<app-adminsignin></app-adminsignin>

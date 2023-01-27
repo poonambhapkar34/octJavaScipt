@@ -6,7 +6,9 @@ import { LoginformComponent } from './loginform/loginform.component';
 import { FormsModule } from "@angular/forms";
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { LandingComponent } from './landing/landing.component';
+import { AdminloginModule } from './adminlogin/adminlogin.module';
  //imported formModule for ngModule
+console.log('root module');
 
 @NgModule({
   declarations: [
@@ -20,8 +22,10 @@ import { LandingComponent } from './landing/landing.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AdminloginModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
