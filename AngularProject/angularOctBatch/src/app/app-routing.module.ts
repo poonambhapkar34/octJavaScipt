@@ -8,8 +8,9 @@ const routes: Routes = [
   {path : '', component : LandingComponent},
   {path : 'loginform' , component : LoginformComponent},
   {path : 'studentLogin' , component : StudentloginComponent},
-  {path : 'landing' , component: LandingComponent}
-
+  {path : 'landing' , component: LandingComponent},
+  //lazy loading
+  {path : 'adminLogin', loadChildren : ()=> import('./adminlogin/adminlogin.module').then(m=>m.AdminloginModule)}
 ];
 
 @NgModule({

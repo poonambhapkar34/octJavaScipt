@@ -23,7 +23,7 @@ console.log('root module');
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AdminloginModule
+    // AdminloginModule
   ],
 
   providers: [],
