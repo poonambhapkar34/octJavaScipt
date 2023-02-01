@@ -5,6 +5,7 @@ import { AdminloginRoutingModule } from './adminlogin-routing.module';
 import { AdminsigninComponent } from './adminsignin/adminsignin.component';
 import { FormsModule } from '@angular/forms';
 import { AdminlandingComponent } from './adminlanding/adminlanding.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 console.log('admin module');
 
@@ -12,7 +13,8 @@ console.log('In admin module')
 @NgModule({
   declarations: [
     AdminsigninComponent,
-    AdminlandingComponent
+    AdminlandingComponent,
+    PagenotfoundComponent
   ],
   imports: [
     CommonModule,
