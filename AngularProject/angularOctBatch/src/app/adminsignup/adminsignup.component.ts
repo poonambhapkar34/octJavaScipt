@@ -6,9 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./adminsignup.component.scss']
 })
 export class AdminsignupComponent {
-submit(formData : any){
+  data = {
+    name : 'poonam',
+    mobNo : 569896666,
+    email : 'poo@jjj.com',
+    pass: 'poonam$34'
+
+  }
+submit(formData? : any){
   //console.log('-->',formData.signUp);
   console.log(formData);
+  this.data = formData;
+  console.log(this.data);
   
 }
+
 }

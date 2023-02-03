@@ -1,13 +1,27 @@
 <h2 class="heading">SignUp form</h2>
 <div class="form-container">
     <form #signUp="ngForm" autocomplete="off">
+        <!-- <label>Name</label><br>
+        <input type="text" [(ngModel)]="data.name" #name ='ngModel' name="name" required maxlength="5"><br>
+        <span *ngIf="!name.touched" class="error">  Name is required</span><br><br>
+        <label>Mobile No</label><br>
+        <input type="text" [(ngModel)]="data.mobNo" name="mob"><br>
+        <label>Email</label><br>
+        <input type="email"  [(ngModel)]="data.email" name="email"><br> -->
+
         <label>Name</label><br>
-        <input type="text" ngModel name="name"><br>
+        <input type="text" ngModel #fullname ='ngModel' name="fullname" required maxlength="5"><br>
+        <span *ngIf="fullname.errors?.['required'] " class="error">name is reuired</span><br>
+       
         <label>Mobile No</label><br>
         <input type="text" ngModel name="mob"><br>
+
+        <label>Email</label><br>
+        <input type="email" ngModel name="email"><br>
+
         <label>Create Password</label><br>
-        <input type="text" ngModel name="pass"><br><br><br>
+        <input type="text" ngModel name="pass" maxlength="4"><br><br><br>
         <!-- <input type="submit"> -->
-        <button  (click)="submit(signUp.value)">submit</button>
+        <button [disabled]="signUp.invalid"  (click)="submit()">submit</button>
     </form>
 </div>
