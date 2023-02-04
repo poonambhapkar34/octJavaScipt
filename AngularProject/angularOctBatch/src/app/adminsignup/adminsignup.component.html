@@ -1,27 +1,35 @@
 <h2 class="heading">SignUp form</h2>
 <div class="form-container">
     <form #signUp="ngForm" autocomplete="off">
-        <!-- <label>Name</label><br>
-        <input type="text" [(ngModel)]="data.name" #name ='ngModel' name="name" required maxlength="5"><br>
-        <span *ngIf="!name.touched" class="error">  Name is required</span><br><br>
-        <label>Mobile No</label><br>
-        <input type="text" [(ngModel)]="data.mobNo" name="mob"><br>
-        <label>Email</label><br>
-        <input type="email"  [(ngModel)]="data.email" name="email"><br> -->
 
         <label>Name</label><br>
-        <input type="text" ngModel #fullname ='ngModel' name="fullname" required maxlength="5"><br>
-        <span *ngIf="fullname.errors?.['required'] " class="error">name is reuired</span><br>
-       
+        <input type="text" ngModel #fullname='ngModel' name="fullname" required maxlength="10" minlength="5"
+            placeholder=" Please enter your Name"><br>
+        <!-- <span *ngIf="!fullname.touched"> Please enter your Name </span> -->
+        <span *ngIf="fullname.errors?.['required'] && fullname.touched && fullname.invalid" class="error-msg">name is
+            reuired</span><br>
+        <span class="error-msg" *ngIf="fullname.touched && fullname.errors?.['minlength']">fullname should contain
+            atleast 5 charachters</span><br>
+
         <label>Mobile No</label><br>
-        <input type="text" ngModel name="mob"><br>
+        <input type="text" ngModel name="mobNo" #mobNo='ngModel' pattern="[7-9]{1}[0-9]{9}" maxlength="10"
+            placeholder=" Please enter your mobile No" minlength="10"><br>
+        <span class="error-msg" *ngIf="mobNo.touched && mobNo.errors?.['pattern'] &&  
+            !mobNo.errors?.['minlength']">Pattern Not
+            matched</span><br>
+        <span class="error-msg" *ngIf="mobNo.touched &&
+         mobNo.errors?.['minlength']">Please enter valid mobile
+            number</span><br>
 
         <label>Email</label><br>
-        <input type="email" ngModel name="email"><br>
+        <input type="email" ngModel name="email" email #email='ngModel' placeholder=" Please enter your Email Id"><br>
+        <span class="error-msg" *ngIf="email.touched && !email.valid">Please enter valid email id</span><br>
 
         <label>Create Password</label><br>
-        <input type="text" ngModel name="pass" maxlength="4"><br><br><br>
-        <!-- <input type="submit"> -->
-        <button [disabled]="signUp.invalid"  (click)="submit()">submit</button>
+        <input type="password" ngModel #pass='ngModel' name="pass" pattern="[A-Z]{1}[A-Za-z0-9]{9}" maxlength="10"
+            placeholder=" Please Type here Password"><br><br><br>
+        <span class="error-msg" *ngIf="pass.touched && pass.errors?.['pattern']">Please Enter valid password</span>
+        <br>
+        <button [disabled]="!signUp.valid" (click)="submit(signUp.value)">submit</button>
     </form>
 </div>
