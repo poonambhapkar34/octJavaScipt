@@ -3,20 +3,33 @@
 <div>
     <form [formGroup]="studentDataForm!" class="reactive-form-container" >
         <label for="">Name</label><br>
-        <input type="text" formControlName="studentName" ><br><br>
+        <input type="text" formControlName="studentName" ><br>
+        
+        <span *ngIf="!studentDataForm.get('studentName')?.touched">Enter you Name</span>
+        
+        <span class="error-msg" *ngIf="studentDataForm.get('studentName')?.touched && 
+        studentDataForm.get('studentName')?.errors?.['required']">Name is reuired</span>
+        
+        <span class="error-msg" *ngIf="studentDataForm.get('studentName')?.touched && 
+       
+        studentDataForm.get('studentName')?.errors?.['maxlength']">maxlength for name allowed is 5</span>
+        <br>
 
-        <label for="">Mobile No</label><br>
-        <input type="text" formControlName="mobNo"><br><br>
+        <label>Mobile No</label><br>
+        <input type="text" formControlName="mobNo" maxlength="10"><br><br>
 
         <label for="" >Gender</label><br>
-        <input type="radio" formControlName="gender">Male<br>
-        <input type="radio" formControlName="gender">Female<br><br>
+        <input type="radio" formControlName="gender" value="male">Male<br>
+        <input type="radio" formControlName="gender" value="female">Female<br><br>
 
         <label for="">Hobbies</label><br>
-        <input type="checkbox" formControlName="painting">Painting<br>
+        <input type="checkbox" formControlName="painting" value="painting">Painting<br>
         <input type="checkbox"  formControlName="dancing">Dancing<br>
         <input type="checkbox"  formControlName="reading">Reading<br>
         <input type="checkbox"  formControlName="outing">Outing<br>
-        <button (click)="submitFormData()">Submit</button>
+        <input type="checkbox" formControlName="temsAndCond">Please accept terms and conditions <br>
+        <input type="date" formControlName="dob">
+
+        <button [disabled]="studentDataForm.invalid" (click)="submitFormData(studentDataForm.value)">Submit</button>
     </form>
 </div>
