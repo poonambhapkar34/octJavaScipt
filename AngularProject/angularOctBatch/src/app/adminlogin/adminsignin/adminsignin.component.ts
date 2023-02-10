@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 // interface student{
 //   name:string,
 //   id:number,
@@ -32,7 +32,7 @@ export class AdminsigninComponent {
 //defination or controling of form
   studentDataFormValidations(){
    this.studentDataForm = this.formBuilder.group({
-    studentName : [this.studentData.name, [Validators.required,Validators.maxLength(5)]],
+    studentName : [this.studentData.name, [Validators.required,Validators.maxLength(5),this.nameValidation]],
     mobNo :[''],
     gender:['male'],
     painting:[],
@@ -42,6 +42,14 @@ export class AdminsigninComponent {
     temsAndCond:['',[Validators.requiredTrue]],
     dob:[]
    })
+  }
+//Copy cOpy coPy copy copY
+  nameValidation(control:FormControl): any {
+   console.log('control',control.value); //copy
+   let nameValue = control.value;
+   let updatedNewValue = nameValue?.toLowerCase();
+   let isInclude = updatedNewValue?.includes('copy','hello','the');
+   return isInclude ? { isValid : true }:null
   }
   submitFormData(value:any) {
    this.formData = value;

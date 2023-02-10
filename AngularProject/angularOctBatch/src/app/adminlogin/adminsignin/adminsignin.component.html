@@ -8,8 +8,8 @@
         <span *ngIf="!studentDataForm.get('studentName')?.touched">Enter you Name</span>
         
         <span class="error-msg" *ngIf="studentDataForm.get('studentName')?.touched && 
-        studentDataForm.get('studentName')?.errors?.['required']">Name is reuired</span>
-        
+        studentDataForm.get('studentName')?.errors?.['required']  ">Name is reuired</span>
+        <span class="error-msg" *ngIf="studentDataForm.get('studentName')?.errors?.['isValid']">Name is invalid</span>
         <span class="error-msg" *ngIf="studentDataForm.get('studentName')?.touched && 
        
         studentDataForm.get('studentName')?.errors?.['maxlength']">maxlength for name allowed is 5</span>
