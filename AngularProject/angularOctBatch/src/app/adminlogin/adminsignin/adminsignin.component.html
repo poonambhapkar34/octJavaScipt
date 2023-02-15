@@ -10,6 +10,7 @@
         <span class="error-msg" *ngIf="studentDataForm.get('studentName')?.touched && 
         studentDataForm.get('studentName')?.errors?.['required']  ">Name is reuired</span>
         <span class="error-msg" *ngIf="studentDataForm.get('studentName')?.errors?.['isValid']">Name is invalid</span>
+        <span class="error-msg" *ngIf="studentDataForm.get('studentName')?.errors?.['whiteSpaces'] && studentDataForm.get('studentName')?.touched">Name is invalid....</span>
         <span class="error-msg" *ngIf="studentDataForm.get('studentName')?.touched && 
        
         studentDataForm.get('studentName')?.errors?.['maxlength']">maxlength for name allowed is 5</span>
@@ -30,6 +31,6 @@
         <input type="checkbox" formControlName="temsAndCond">Please accept terms and conditions <br>
         <input type="date" formControlName="dob">
 
-        <button [disabled]="studentDataForm.invalid" (click)="submitFormData(studentDataForm.value)">Submit</button>
+        <button [disabled]="!studentDataForm.valid" (click)="submitFormData()">Submit</button>
     </form>
 </div>

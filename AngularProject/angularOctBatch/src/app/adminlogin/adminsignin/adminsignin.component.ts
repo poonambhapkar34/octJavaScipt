@@ -32,7 +32,7 @@ export class AdminsigninComponent {
 //defination or controling of form
   studentDataFormValidations(){
    this.studentDataForm = this.formBuilder.group({
-    studentName : [this.studentData.name, [Validators.required,Validators.maxLength(5),this.nameValidation]],
+    studentName : ['', [Validators.required,Validators.maxLength(5),this.nameValidation,this.whiteSpaceValidator]],
     mobNo :[''],
     gender:['male'],
     painting:[],
@@ -51,9 +51,15 @@ export class AdminsigninComponent {
    let isInclude = updatedNewValue?.includes('copy','hello','the');
    return isInclude ? { isValid : true }:null
   }
-  submitFormData(value:any) {
-   this.formData = value;
-   console.log(value);
+  whiteSpaceValidator(inpFiledData : FormControl){
+   let nameValue = inpFiledData.value;
+   let trimedValue = nameValue.trim().length > 0;
+  // let trimedValue2 = trimedValue.length > 0; 
+    return trimedValue ?   null : {whiteSpaces : true}
+  }
+  submitFormData() {
+   this.formData = this.studentDataForm.value;
+   console.log(this.formData);
    let date = this.formData.date?.split('-').reverse().join('-');
    console.log(date);
    let name1 =  this.formData.studentName.trim()

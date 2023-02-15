@@ -3,9 +3,10 @@
     <form #signUp="ngForm" autocomplete="off">
 
         <label>Name</label><br>
-        <input type="text" ngModel #fullname='ngModel' name="fullname" required maxlength="10" minlength="5"
+        <input type="text" ngModel #fullname='ngModel' name="fullname"
+         required maxlength="10" minlength="5"
             placeholder=" Please enter your Name"><br>
-        <!-- <span *ngIf="!fullname.touched"> Please enter your Name </span> -->
+        <span *ngIf="!fullname.touched"> Please enter your Name </span>
         <span *ngIf="fullname.errors?.['required'] && fullname.touched && fullname.invalid" class="error-msg">name is
             reuired</span><br>
         <span class="error-msg" *ngIf="fullname.touched && fullname.errors?.['minlength']">fullname should contain

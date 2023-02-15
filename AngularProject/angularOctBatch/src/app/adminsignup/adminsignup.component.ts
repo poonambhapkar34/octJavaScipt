@@ -13,10 +13,15 @@ export class AdminsignupComponent {
     pass: 'poonam$34'
 
   }
-submit(formData? : any){
+  data2:any;
+  
+  ngOnInit(){
+   
+  }
+   submit(formData? : any){
   //console.log('-->',formData.signUp);
   console.log(formData);
-  this.data = formData;
+  this.data2 = formData;
   console.log(this.data);
   
 }
