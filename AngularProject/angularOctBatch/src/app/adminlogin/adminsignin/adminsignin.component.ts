@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { DataService } from './../../adminsignup/data.service';
+
 // interface student{
 //   name:string,
 //   id:number,
@@ -21,7 +23,7 @@ export class AdminsigninComponent {
     address:'jjjj',
   };
   formData : any;
-  constructor(public formBuilder: FormBuilder) {
+  constructor(public formBuilder: FormBuilder,private dataService : DataService) {
    
   }
   ngOnInit() {
@@ -67,6 +69,7 @@ export class AdminsigninComponent {
    let name =  name1.toUpperCase();
    console.log(name);
    
+   this.dataService.city = 'pune';
    
   }
 }

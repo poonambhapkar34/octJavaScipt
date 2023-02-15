@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './adminsignup/data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,18 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+cityName:any;
  public title = 'angularOctBatch';
  public name:string = 'poonam';
         middleName:any = 'Abhijit';
         fruit :any;
 
-  constructor() {
+  constructor(private dataService : DataService ) {
     console.log('i am inside constructor');
   }
  // const surname :string = 'patil'; var /property both are same..
  //only differnce is we can not add prefix let/var /const to the property
-
+  ngOnInit(){
+ this.cityName = this.dataService.city;
+ console.log(this.cityName);
+ 
+  }
  public myFirstFunction(): any{
     console.log('welcome');
     let surname :string = 'patil';
