@@ -8,6 +8,8 @@ import { DataService } from './data.service';
 })
 export class AdminsignupComponent {
   city?:string;
+  city2?:string;
+  
   data = {
     name : 'poonam',
     mobNo : 569896666,
@@ -21,8 +23,10 @@ export class AdminsignupComponent {
 
   }
   ngOnInit(){
-  this.city = this.dataService.city;
-  console.log('this.city',this.city);
+  this.city = this.dataService.city;//to get city property's value
+  console.log('city',this.city);
+  this.city2 = this.dataService.getCityName(); //to get city2 property's value by calling getter func
+  console.log('city2',this.city2);
   
   }
    submit(formData? : any){

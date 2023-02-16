@@ -19,6 +19,7 @@ cityName:any;
  // const surname :string = 'patil'; var /property both are same..
  //only differnce is we can not add prefix let/var /const to the property
   ngOnInit(){
+    //getting the city property
  this.cityName = this.dataService.city;
  console.log(this.cityName);
  
