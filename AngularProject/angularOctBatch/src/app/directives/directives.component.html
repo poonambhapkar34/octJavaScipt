@@ -1,0 +1,20 @@
+<p>directives works!</p>
+<!--Component Directives @component
+ Structural Directives *ngIf,*ngFor,*ngSwitch dom element show/hide :ngIf , looping: ngFor ,conditionally show hide :ngSwitch
+Attribute Directives ngStyle,ngClass
+custom directive - ng g directive directive_name-->
+
+<h2 *ngIf="show_content">I like Mumbai....</h2>
+<p>I Like Mango </p>
+<button (click)="showContent()">click to show h2 tag</button>
+<!-- {{list}} -->
+<br>
+<button (click)="showList()">click to show list</button>
+<button (click)="hideList()">click toHide list</button>
+<div *ngIf="show_list">
+    <ul  *ngFor="let listIems of list">
+        <li>{{ listIems}}</li>
+    </ul>
+</div>
+
+

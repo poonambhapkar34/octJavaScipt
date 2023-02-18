@@ -9,12 +9,13 @@ export class DataService {
   city2?:string ;
   constructor() { }
 
-  //Copy cOpy coPy copy copY
+  //Copy cOpy coPy copy copY...
   nameValidation(control:FormControl): any {
     console.log('control',control.value); //copy
     let nameValue = control.value;
     let updatedNewValue = nameValue?.toLowerCase();
-    let isInclude = updatedNewValue?.includes('copy','hello','the');
+    //let isInclude = updatedNewValue?.includes('copy'); //to restrict single word
+    let isInclude = updatedNewValue?.includes("copy") || updatedNewValue?.includes("hello") || updatedNewValue?.includes('the');//to restrict multiple word
     return isInclude ? { isValid : true }:null
    }
 
