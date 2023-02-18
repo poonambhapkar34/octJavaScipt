@@ -27,9 +27,7 @@ export class AdminsigninComponent {
    
   }
   ngOnInit() {
-
     this.studentDataFormValidations();
-
   }
 //defination or controling of form
   studentDataFormValidations(){
