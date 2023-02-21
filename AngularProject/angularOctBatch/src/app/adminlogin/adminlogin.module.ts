@@ -6,6 +6,7 @@ import { AdminsigninComponent } from './adminsignin/adminsignin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminlandingComponent } from './adminlanding/adminlanding.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { SharedModule } from '../shared/shared.module';
 
 console.log('admin module');
 
@@ -14,15 +15,18 @@ console.log('In admin module')
   declarations: [
     AdminsigninComponent,
     AdminlandingComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    
   ],
   imports: [
     CommonModule,
     AdminloginRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   exports : [
+    SharedModule
    // AdminsigninComponent //to access in other modules
   ]
 })

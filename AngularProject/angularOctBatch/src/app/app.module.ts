@@ -7,24 +7,26 @@ import { FormsModule } from "@angular/forms";
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { LandingComponent } from './landing/landing.component';
 import { AdminloginModule } from './adminlogin/adminlogin.module';
+import { NamevalidationDirective } from './namevalidation.directive';
  //imported formModule for ngModule
 console.log('root module');
 
 @NgModule({
-  declarations: [
+  declarations: [ //compo+dire
     AppComponent,
     LoginformComponent,
     StudentloginComponent,
     LandingComponent,
-   
+   // NamevalidationDirective,
   
   ],
-  imports: [
+  imports: [ //modules
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     // AdminloginModule
   ],
+  // exports :[ NamevalidationDirective],
 
   providers: [],
   bootstrap: [AppComponent]
