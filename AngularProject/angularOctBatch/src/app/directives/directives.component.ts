@@ -13,16 +13,22 @@ export class DirectivesComponent { //main class which include all logic
   noColor:boolean = false;
   textColor = 'yellow';
   fontSize = '30px';
+  myName! : string ;
   show_content: boolean = true;  //properties declaration and defination section
   list = ['panir', 'kaju-kurma', 'icecream', 'veg kolhapuri', 'palak panir'];
   show_list: boolean = false;
-
+  firstName = 'Raj';
+  headerContent1 ='para1'
+  dynamicClass = false;
+  dynamicClass2 = false;
+  dynamicClass3 = true;
   constructor(private commonDataService: CommondataService) {  //constructor : implicitly get called by compiler(DI)
 
   }
   //to fetch data from service u either go with onInit:if want to get or set data on page load or go with functions:if want to get or set data on events
   ngOnInit() {  //Lifecycle hook : (fuction which implicitly get called by compiler ) used to fetch services properties
- this.gettingMarksOnInit =  this.commonDataService.marks
+    this.gettingMarksOnInit = this.commonDataService.marks;
+    //this.headerContent = 'para';
   }
   showContent() { // functions 
     this.show_content = false;
@@ -30,6 +36,7 @@ export class DirectivesComponent { //main class which include all logic
   showList() {
    this.show_list = true;
    this.gettingMarksOnClick = this.commonDataService.marks;
+   this.firstName = '';
   }
   hideList() {
     this.show_list = false;
@@ -38,5 +45,8 @@ export class DirectivesComponent { //main class which include all logic
     this.noColor = true;
    this.color = 'orange';
 
+  }
+  dynamicCls(){
+    return 'para';
   }
 }

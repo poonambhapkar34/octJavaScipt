@@ -27,6 +27,6 @@ items = ['poo'+'patil'+50+20,'ppp','ooo',0,8];
       this.router.navigateByUrl('/loginform');
     }
     lazyLoadingRouting(){
-      this.router.navigateByUrl('/adminLogin/adminSignIn')
+      this.router.navigateByUrl('/adminLogin')
     }
 }
