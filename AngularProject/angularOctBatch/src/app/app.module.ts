@@ -7,23 +7,29 @@ import { FormsModule } from "@angular/forms";
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { LandingComponent } from './landing/landing.component';
 import { AdminloginModule } from './adminlogin/adminlogin.module';
-import { NamevalidationDirective } from './namevalidation.directive';
+import { SharedModule } from './shared/shared.module';
+//import { CustomPipe } from './custom.pipe';
+//import { CurrencyPipe1 } from './currency1.pipe';
+
  //imported formModule for ngModule
 console.log('root module');
 
 @NgModule({
-  declarations: [ //compo+dire
+  declarations: [ //compo+dire+pipe
     AppComponent,
     LoginformComponent,
     StudentloginComponent,
     LandingComponent,
-   // NamevalidationDirective,
+   // CustomPipe,
+   // CurrencyPipe1,
+  
   
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    SharedModule,
     // AdminloginModule
   ],
   // exports :[ NamevalidationDirective],

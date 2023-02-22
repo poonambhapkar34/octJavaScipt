@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { CurrencyPipe1 } from 'src/app/currency1.pipe';
 import { DataService } from './../../adminsignup/data.service';
 
 // interface student{
@@ -10,7 +11,8 @@ import { DataService } from './../../adminsignup/data.service';
 @Component({
   selector: 'app-adminsignin',
   templateUrl: './adminsignin.component.html',
-  styleUrls: ['./adminsignin.component.scss']
+  styleUrls: ['./adminsignin.component.scss'],
+ // providers:[CurrencyPipe1]
 })
 
 
@@ -23,6 +25,9 @@ export class AdminsigninComponent {
     address:'jjjj',
   };
   formData : any;
+  fName : string ='raj patil';
+ today  = Date.now();
+ num= 200;
   constructor(public formBuilder: FormBuilder,private dataService : DataService) {
    
   }

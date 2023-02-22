@@ -25,10 +25,10 @@ console.log('In admin module')
     ReactiveFormsModule,
     SharedModule
   ],
-  exports : [
-    SharedModule
+  //exports : [
+  //  SharedModule
    // AdminsigninComponent //to access in other modules
-  ]
+  //]
 })
 export class AdminloginModule { 
 ;
