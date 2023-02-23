@@ -13,4 +13,9 @@ export class NamevalidationDirective {
     console.log('inputdata',inputData);
     this.elementRef.nativeElement.value = inputData?.replace(/[^a-zA-Z]/g, '');
   }
+  ngOnDestroy(){
+    //Cleanup just before destroying Angular directive or component. To avoid memory leaks, unsubscribe from observables and detach event handlers.
+    console.log('ngOnDestroy dir......');
+    
+  }
 }

@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminlandingComponent } from './adminlanding/adminlanding.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { SharedModule } from '../shared/shared.module';
+import { NumbersonlyDirective } from './numbersonly.directive';
 
 console.log('admin module');
 
@@ -16,6 +17,7 @@ console.log('In admin module')
     AdminsigninComponent,
     AdminlandingComponent,
     PagenotfoundComponent,
+    NumbersonlyDirective,
     
   ],
   imports: [

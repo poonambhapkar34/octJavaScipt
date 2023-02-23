@@ -3,7 +3,7 @@
 <div>
     <form [formGroup]="studentDataForm!" class="reactive-form-container" >
         <label for="">Name</label><br>
-        <input type="text" appNamevalidation formControlName="studentName" ><br>
+        <input type="text" appNamevalidation  formControlName="studentName" ><br>
         
         <span *ngIf="!studentDataForm.get('studentName')?.touched">Enter you Name</span>
         
@@ -17,7 +17,7 @@
         <br>
 
         <label>Mobile No</label><br>
-        <input type="text" formControlName="mobNo"   maxlength="10"><br><br>
+        <input type="text" formControlName="mobNo" appNumbersonly   maxlength="10"><br><br>
 
         <label>City</label><br>
         <input type="text" formControlName="city" maxlength="50"><br><br>

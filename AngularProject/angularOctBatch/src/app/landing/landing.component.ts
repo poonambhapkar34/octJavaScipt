@@ -29,4 +29,8 @@ items = ['poo'+'patil'+50+20,'ppp','ooo',0,8];
     lazyLoadingRouting(){
       this.router.navigateByUrl('/adminLogin')
     }
+    ngOnDestroy(){
+      console.log('ngOnDestroy');
+      
+    }
 }
