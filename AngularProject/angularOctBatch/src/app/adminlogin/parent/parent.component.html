@@ -1,0 +1,7 @@
+<p>parent works!</p>
+<input type="text" #inputVal>parent:type here something ...
+<button (click)="dataFromParentToChild(inputVal.value)">parent btn </button>
+{{dataFromChild}}:: data from child
+<br>------------------------------------------------------------------
+<app-child [parentData]="inputBoxValue" (childData)="dataFetchingFromChild($event)"></app-child>
+

@@ -8,6 +8,8 @@ import { AdminlandingComponent } from './adminlanding/adminlanding.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { SharedModule } from '../shared/shared.module';
 import { NumbersonlyDirective } from './numbersonly.directive';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 console.log('admin module');
 
@@ -18,6 +20,8 @@ console.log('In admin module')
     AdminlandingComponent,
     PagenotfoundComponent,
     NumbersonlyDirective,
+    ParentComponent,
+    ChildComponent,
     
   ],
   imports: [

@@ -11,7 +11,11 @@ export class StudentloginComponent implements OnChanges{
   console.log('contructor ');
 
   }
-  
+  ngOnChanges(){
+    //@input property will call this hook
+    //on every event on input box it will trigger
+    console.log('ngOnChanges....'); 
+  }
   ngOnInit(){
     //used to initialize data in a compo
     //called only once at initially
@@ -19,13 +23,9 @@ export class StudentloginComponent implements OnChanges{
     console.log('ngOnInit ...');
   }
 
-  ngOnChanges(){
-    //input element will call this hook
-    //on every event on input box it will trigger
-    console.log('ngOnChanges....');
-    
-  }
+  
   ngDoCheck(){
+    //on every event (click,scroll)  it will trigger
     console.log('do..');
     
   }

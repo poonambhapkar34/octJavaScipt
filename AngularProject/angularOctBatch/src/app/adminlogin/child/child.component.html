@@ -1,0 +1,6 @@
+<p>child works!</p>
+{{parentData}}
+
+<h1>child to parent</h1>
+<input type="text" #childInpVal>child:data from child to parent
+<button (click)="sendData(childInpVal.value)">click to send data to parent</button>
