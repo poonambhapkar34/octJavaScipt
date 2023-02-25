@@ -3,4 +3,7 @@
 
 <h1>child to parent</h1>
 <input type="text" #childInpVal>child:data from child to parent
-<button (click)="sendData(childInpVal.value)">click to send data to parent</button>
+<button (click)="sendData(childInpVal.value)">click to send data to parent</button><br>
+<button (click)="subjectData()">subject </button> <br>
+<button routerLink="/adminLogin/subject">subject component</button> <br>
+<app-subjecttest *ngIf="showSubCompo"></app-subjecttest>

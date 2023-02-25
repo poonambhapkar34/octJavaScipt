@@ -10,6 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 import { NumbersonlyDirective } from './numbersonly.directive';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { SubjecttestComponent } from './subjecttest/subjecttest.component';
 
 console.log('admin module');
 
@@ -22,6 +23,7 @@ console.log('In admin module')
     NumbersonlyDirective,
     ParentComponent,
     ChildComponent,
+    SubjecttestComponent,
     
   ],
   imports: [

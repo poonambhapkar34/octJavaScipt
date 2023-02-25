@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ import { FormControl } from '@angular/forms';
 export class DataService {
   city = 'mumbai';
   city2?:string ;
+  data = new Subject<any>();
   constructor() { }
 
   //Copy cOpy coPy copy copY...

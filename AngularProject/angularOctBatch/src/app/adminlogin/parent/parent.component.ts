@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ParentComponent {
   inputBoxValue :any;
   dataFromChild :any;
+  
   dataFromParentToChild(value:any){
    console.log("parentvalue",value);
    this.inputBoxValue = value;
