@@ -12,7 +12,8 @@ const routes: Routes = [
   //lazy loading
   {path : 'adminLogin', loadChildren : ()=> import('./adminlogin/adminlogin.module').then(m=>m.AdminloginModule)},
   { path: 'adminsignup', loadChildren: () => import('./adminsignup/adminsignup.module').then(m => m.AdminsignupModule) },
-  { path: 'directives', loadChildren: () => import('./directives/directives.module').then(m => m.DirectivesModule) }
+  { path: 'directives', loadChildren: () => import('./directives/directives.module').then(m => m.DirectivesModule) },
+  { path: 'API', loadChildren: () => import('./api/api.module').then(m => m.APIModule) }
 ];
 
 @NgModule({

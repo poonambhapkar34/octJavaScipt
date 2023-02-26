@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "taj",
+      "author": "harry",
+      "id": 4
+    },
+    {
+      "title1": "3-mistakes of life",
+      "author11": "chetan bhagat",
+      "id": 5
+    },
+    {
+      "title1": "3-mistakes of life1",
+      "author11": "chetan bhagat1",
+      "id": 6
+    },
+    {
+      "name": "Raj Patil",
+      "mob_No": 9856332335,
+      "password": "Raj@123",
+      "confirm_pass": "Raj@123",
+      "id": 7
+    },
+    {
+      "name": "Raj Patil",
+      "mob_No": 77777735,
+      "password": "Raj@123",
+      "confirm_pass": "Raj@123",
+      "id": 8
+    },
+    {
+      "name": "Ram Patil",
+      "mob_No": 77777735,
+      "password": "Ram@123",
+      "confirm_pass": "Ram@123",
+      "id": 9
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {}
+}
