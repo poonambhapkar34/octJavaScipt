@@ -22,16 +22,28 @@ export class APIComponent {
 // },
 getApiData : any;
 getApiResponse: any;
+url = "http://localhost:3000/posts";
 constructor( private apiCallService: ApiCallService){
 }
-
+//get api call
   getApi() {
-    let url = "http://localhost:3000/posts";
-    this.apiCallService.getApi(url).subscribe(res => {
+    // let url = "http://localhost:3000/posts";
+    this.apiCallService.getApi(this.url).subscribe(res => {
     this.getApiResponse = res;
     console.log('getApiResponse',this.getApiResponse);
   });
-   
+  }
+  //get Api call by passing ID:
+   getApiById(){
+    let id = 12;
+    let slash = '/'
+  //  this.apiCallService.getApiCallById(this.url,id ).subscribe(getDataById=>{
+  //   console.log('getDataById',getDataById);
+  //  })
+  this.apiCallService.getApi(this.url, slash, id).subscribe(res => {
+    this.getApiResponse = res;
+    console.log('getApiResponse',this.getApiResponse);
+  });
   }
 }
 

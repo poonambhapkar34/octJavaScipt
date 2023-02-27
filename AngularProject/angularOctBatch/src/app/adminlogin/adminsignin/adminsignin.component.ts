@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ApiCallService } from 'src/app/api-call.service';
 import { CurrencyPipe1 } from 'src/app/currency1.pipe';
 import { DataService } from './../../adminsignup/data.service';
 
@@ -28,7 +29,9 @@ export class AdminsigninComponent {
   fName : string ='raj patil';
  today  = Date.now();
  num= 200;
-  constructor(public formBuilder: FormBuilder,private dataService : DataService) {
+  postApiData: any;
+  constructor(public formBuilder: FormBuilder,private dataService : DataService,
+    private apiCallService : ApiCallService) {
    
   }
   ngOnInit() {
@@ -49,10 +52,10 @@ export class AdminsigninComponent {
     dob:[]
    })
   }
-
+//form submit function
   submitFormData() {
    this.formData = this.studentDataForm.value;
-   console.log(this.formData);
+   console.log('form data',this.formData);
    let date = this.formData.date?.split('-').reverse().join('-');
    console.log(date);
    let name1 =  this.formData.studentName.trim()
@@ -65,5 +68,13 @@ export class AdminsigninComponent {
    //set the city property
    this.dataService.city = this.studentDataForm.value.city;//direct value assigner
    this.dataService.setCityName(this.studentDataForm.value.city) //setter methos
+
+   //post Api call
+   let url = "http://localhost:3000/posts";
+   this.apiCallService.postApiCall(url,this.formData).subscribe(data=>{
+    this.postApiData = data;
+    console.log(data);
+    
+   })
   }
 }

@@ -3,7 +3,7 @@
 <div>
     <form [formGroup]="studentDataForm!" class="reactive-form-container" >
         <label for="">Name</label><br>
-        <input type="text" appNamevalidation  formControlName="studentName" ><br>
+        <input type="text" appNamevalidation  formControlName="studentName"><br>
         
         <span *ngIf="!studentDataForm.get('studentName')?.touched">Enter you Name</span>
         

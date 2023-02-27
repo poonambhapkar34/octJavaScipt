@@ -40,6 +40,39 @@
       "password": "Ram@123",
       "confirm_pass": "Ram@123",
       "id": 9
+    },
+    {
+      "name": "Ram Patieeel",
+      "mob_No": 77777735,
+      "password": "Ram@123e",
+      "confirm_pass": "Ram@1e23",
+      "id": 10
+    },
+    {
+      "studentName": "pppp",
+      "mobNo": "55555555",
+      "city": "mumbai",
+      "gender": "male",
+      "painting": true,
+      "dancing": true,
+      "reading": null,
+      "outing": null,
+      "temsAndCond": true,
+      "dob": "2023-02-07",
+      "id": 11
+    },
+    {
+      "studentName": "Raj",
+      "mobNo": "9895623",
+      "city": "mumbai",
+      "gender": "male",
+      "painting": true,
+      "dancing": true,
+      "reading": true,
+      "outing": true,
+      "temsAndCond": true,
+      "dob": "2023-02-07",
+      "id": 12
     }
   ],
   "comments": [
