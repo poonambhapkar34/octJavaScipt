@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiCallService } from 'src/app/api-call.service';
 import { CurrencyPipe1 } from 'src/app/currency1.pipe';
 import { DataService } from './../../adminsignup/data.service';
@@ -25,13 +26,16 @@ export class AdminsigninComponent {
     id:444,
     address:'jjjj',
   };
-  formData : any;
-  fName : string ='raj patil';
- today  = Date.now();
- num= 200;
-  postApiData: any;
+  formData: any;
+  fName: string = 'raj patil';
+  today = Date.now();
+  num = 200;
+  postApiData = {
+    "status":200,
+    "massage":"data submitted successfully",
+  }
   constructor(public formBuilder: FormBuilder,private dataService : DataService,
-    private apiCallService : ApiCallService) {
+    private apiCallService : ApiCallService,private router : Router ) {
    
   }
   ngOnInit() {
@@ -56,6 +60,7 @@ export class AdminsigninComponent {
   submitFormData() {
    this.formData = this.studentDataForm.value;
    console.log('form data',this.formData);
+   console.log('form data.studentName',this.formData.studentName);
    let date = this.formData.date?.split('-').reverse().join('-');
    console.log(date);
    let name1 =  this.formData.studentName.trim()
@@ -72,9 +77,24 @@ export class AdminsigninComponent {
    //post Api call
    let url = "http://localhost:3000/posts";
    this.apiCallService.postApiCall(url,this.formData).subscribe(data=>{
-    this.postApiData = data;
+    // this.postApiData = data;
     console.log(data);
-    
-   })
+  });
+  if(this.postApiData.status === 200){
+  this.router.navigateByUrl('/landing');
   }
+  else{
+
+  }
+  //patch Api Call
+   url = "http://localhost:3000/posts/4";
+   let formData ={
+    "name" : this.formData.studentName,
+    "mobNo" :this.formData.mobNo
+   } 
+ this.apiCallService.patchApiCall(url,formData).subscribe(res=>{
+  console.log(res);
+ })
+  }
+
 }

@@ -6,8 +6,8 @@
       "author": "typicode"
     },
     {
-      "title": "taj",
-      "author": "harry",
+      "name": "yash",
+      "mobNo": "6694131331",
       "id": 4
     },
     {
@@ -49,7 +49,7 @@
       "id": 10
     },
     {
-      "studentName": "pppp",
+      "studentName": "Harsh",
       "mobNo": "55555555",
       "city": "mumbai",
       "gender": "male",
@@ -59,20 +59,86 @@
       "outing": null,
       "temsAndCond": true,
       "dob": "2023-02-07",
-      "id": 11
+      "id": 11,
+      "name": "Ram jadhav",
+      "myFavPlace": "mumbai"
     },
     {
-      "studentName": "Raj",
-      "mobNo": "9895623",
-      "city": "mumbai",
+      "name": "Ram jadhav",
+      "id": 12,
+      "myFavPlace": "mumbai"
+    },
+    {
+      "studentName": "Ram",
+      "mobNo": "7899989899",
+      "city": "pune",
       "gender": "male",
       "painting": true,
-      "dancing": true,
-      "reading": true,
-      "outing": true,
+      "dancing": null,
+      "reading": null,
+      "outing": null,
       "temsAndCond": true,
-      "dob": "2023-02-07",
-      "id": 12
+      "dob": null,
+      "id": 13
+    },
+    {
+      "studentName": "Ram",
+      "mobNo": "7899989899",
+      "city": "pune",
+      "gender": "male",
+      "painting": true,
+      "dancing": null,
+      "reading": null,
+      "outing": null,
+      "temsAndCond": true,
+      "dob": null,
+      "id": 14
+    },
+    {
+      "studentName": "Lakcy",
+      "mobNo": "8988999999",
+      "city": "pune",
+      "gender": "male",
+      "painting": true,
+      "dancing": null,
+      "reading": null,
+      "outing": null,
+      "temsAndCond": true,
+      "dob": null,
+      "id": 15
+    },
+    {
+      "studentName": "Rani",
+      "id": 16,
+      "mobNo": "8988999999",
+      "city": "pune",
+      "gender": "female",
+      "painting": true,
+      "dancing": null,
+      "reading": null,
+      "outing": null,
+      "temsAndCond": true,
+      "dob": null
+    },
+    {
+      "name": "Ram jadhav",
+      "mob_No": 77777735,
+      "password": "RamT@123e",
+      "confirm_pass": "Ram@1e23",
+      "id": 17
+    },
+    {
+      "studentName": "yash",
+      "mobNo": "6694131331",
+      "city": "Delhi",
+      "gender": "male",
+      "painting": true,
+      "dancing": null,
+      "reading": null,
+      "outing": null,
+      "temsAndCond": true,
+      "dob": null,
+      "id": 18
     }
   ],
   "comments": [

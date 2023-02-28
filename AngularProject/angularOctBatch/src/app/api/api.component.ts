@@ -27,7 +27,7 @@ constructor( private apiCallService: ApiCallService){
 }
 //get api call
   getApi() {
-    // let url = "http://localhost:3000/posts";
+    // let url = "http://localhost:3000/posts/12";
     this.apiCallService.getApi(this.url).subscribe(res => {
     this.getApiResponse = res;
     console.log('getApiResponse',this.getApiResponse);
@@ -44,6 +44,28 @@ constructor( private apiCallService: ApiCallService){
     this.getApiResponse = res;
     console.log('getApiResponse',this.getApiResponse);
   });
+  }
+  patchById() {
+    let id = 16
+    let putApiUrl = this.url + '/' + id;
+    let data = {
+      "studentName": 'Rani',
+      "gender": "female",
+    }
+    this.apiCallService.patchApiCall(putApiUrl, data).subscribe(response => {
+      console.log('put api rsp', response);
+    })
+  }
+  putById(){
+    let url = this.url + '/' + 4;
+    let data ={
+      "name":"Shree",
+      "mobNo":898888855
+    }
+    this.apiCallService.putApiCall(url,data).subscribe(res=>{
+      console.log(res);
+      
+    })
   }
 }
 

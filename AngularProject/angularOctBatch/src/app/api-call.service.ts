@@ -5,13 +5,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiCallService {
  
+
+ 
   //slash = '/'
   getApiData :any;
   //url :any;
   constructor(public httpClient: HttpClient) { }
 
   getApi(url:string, slash?:any, id?:number) {
-    //return this.httpClient.get(url);
+    //return this.httpClient.get(url); "http://localhost:3000/posts/12
     console.log('---->>',url + slash + id);
     return (slash == undefined && id == undefined)? this.httpClient.get(url)
     : this.httpClient.get(url + slash + id);
@@ -23,5 +25,14 @@ export class ApiCallService {
   }
   postApiCall(url:string,formData:any) {
    return this.httpClient.post(url,formData);
+  }
+  //patch Api Call: to update valu of specific key of object 
+  patchApiCall(url:any,data:any) {
+  return this.httpClient.patch(url,data)   
+  }
+
+  //put api call
+  putApiCall(url:any,data:any) {
+    return this.httpClient.put(url,data) 
   }
 }
