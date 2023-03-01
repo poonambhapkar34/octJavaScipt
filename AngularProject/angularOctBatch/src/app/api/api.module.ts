@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { APIRoutingModule } from './api-routing.module';
 import { APIComponent } from './api.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from '../shared/shared.module';
+
 @NgModule({
   declarations: [
     APIComponent
@@ -11,7 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     APIRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ]
 })
 export class APIModule { }

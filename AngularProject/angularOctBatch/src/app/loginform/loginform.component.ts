@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class LoginformComponent {
+  public viewChildProperty  = 'Raj';
   car = 5100;
   car1: any;
   num = 20;

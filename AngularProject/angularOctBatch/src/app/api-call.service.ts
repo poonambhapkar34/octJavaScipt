@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiCallService {
+
  
 
  
@@ -23,10 +24,12 @@ export class ApiCallService {
    // console.log('url--->',url + this.slash + id);
     return this.httpClient.get(url + '/' + id);
   }
+  //post Api call
   postApiCall(url:string,formData:any) {
    return this.httpClient.post(url,formData);
   }
-  //patch Api Call: to update valu of specific key of object 
+
+  //patch Api Call: to update value of specific key of object 
   patchApiCall(url:any,data:any) {
   return this.httpClient.patch(url,data)   
   }
@@ -34,5 +37,10 @@ export class ApiCallService {
   //put api call
   putApiCall(url:any,data:any) {
     return this.httpClient.put(url,data) 
+  }
+
+  //delete APi call
+  deleteApiCall(url:string,id:any) {
+   return this.httpClient.delete(url + "/" + id)
   }
 }

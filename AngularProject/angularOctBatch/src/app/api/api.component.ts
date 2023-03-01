@@ -1,6 +1,7 @@
 
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ApiCallService } from '../api-call.service';
+import { LoginformComponent } from '../loginform/loginform.component';
 
 @Component({
   selector: 'app-api',
@@ -20,11 +21,27 @@ export class APIComponent {
 //   "id": 3,
 //   "url":"http://localhost:3000/profile"
 // },
+@ViewChild('h1') headingTag? : ElementRef;
+// @ViewChild (LoginformComponent) fetchingComponent! : LoginformComponent;
 getApiData : any;
 getApiResponse: any;
+test:any;
 url = "http://localhost:3000/posts";
 constructor( private apiCallService: ApiCallService){
 }
+
+ngAfterViewInit(){
+  console.log(this.headingTag?.nativeElement.innerHTML);
+
+  //console.log( this.fetchingComponent.viewChildProperty);
+  
+}
+// ngAfterViewChecked() {
+//  this.test= this.fetchingComponent.viewChildProperty;
+//  console.log('test',this.test);
+ 
+// }
+
 //get api call
   getApi() {
     // let url = "http://localhost:3000/posts/12";
@@ -64,6 +81,14 @@ constructor( private apiCallService: ApiCallService){
     }
     this.apiCallService.putApiCall(url,data).subscribe(res=>{
       console.log(res);
+      
+    })
+  }
+  deleteById(){
+    let url =  this.url + '/' ;
+    let id = 4;
+    this.apiCallService.deleteApiCall(url,id).subscribe(data=>{
+      console.log(data);
       
     })
   }

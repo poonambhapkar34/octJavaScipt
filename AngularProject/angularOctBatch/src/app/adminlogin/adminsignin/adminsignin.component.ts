@@ -92,8 +92,8 @@ export class AdminsigninComponent {
     "name" : this.formData.studentName,
     "mobNo" :this.formData.mobNo
    } 
- this.apiCallService.patchApiCall(url,formData).subscribe(res=>{
-  console.log(res);
+    this.apiCallService.patchApiCall(url,formData).subscribe(res=>{
+    console.log(res);
  })
   }
 

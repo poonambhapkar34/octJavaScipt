@@ -10,14 +10,14 @@ import { AdminloginModule } from './adminlogin/adminlogin.module';
 import { SharedModule } from './shared/shared.module';
 //import { CustomPipe } from './custom.pipe';
 //import { CurrencyPipe1 } from './currency1.pipe';
-import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientModule } from '@angular/common/http';
  //imported formModule for ngModule
 console.log('root module');
 
 @NgModule({
   declarations: [ //compo+dire+pipe
     AppComponent,
-    LoginformComponent,
+   // LoginformComponent,
     StudentloginComponent,
     LandingComponent,
    // CustomPipe,
@@ -30,7 +30,7 @@ console.log('root module');
     AppRoutingModule,
     FormsModule,
     SharedModule,
-    HttpClientModule
+    //HttpClientModule
     // AdminloginModule
   ],
   // exports :[ NamevalidationDirective],
