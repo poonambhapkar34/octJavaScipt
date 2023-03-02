@@ -27,6 +27,8 @@ getApiData : any;
 getApiResponse: any;
 test:any;
 url = "http://localhost:3000/posts";
+  getDataByPromises: any;
+  subcribeProperty: any;
 constructor( private apiCallService: ApiCallService){
 }
 
@@ -45,10 +47,28 @@ ngAfterViewInit(){
 //get api call
   getApi() {
     // let url = "http://localhost:3000/posts/12";
-    this.apiCallService.getApi(this.url).subscribe(res => {
-    this.getApiResponse = res;
-    console.log('getApiResponse',this.getApiResponse);
-  });
+  //   this.apiCallService.getApi(this.url).subscribe(res => {
+  //   this.getApiResponse = res;
+  //   console.log('getApiResponse',this.getApiResponse);
+  // });
+  this.subcribeProperty =  this.apiCallService.getApi(this.url).subscribe(res => {
+      this.getApiResponse = res;
+      console.log('getApiResponse',this.getApiResponse);
+    })
+  console.log(this.getApiResponse)
+  }
+  getApiUsingPromises(){
+    let url = "http://localhost:3000/posts/";
+    this.apiCallService.getApiByPromises(url).toPromise().then(respo=>{
+      this.getDataByPromises = respo;
+      console.log(respo);
+    })
+  }
+ async getApiUsingAsync(){
+    let url = "http://localhost:3000/posts/";
+   var ayncData = await this.apiCallService.getApiByPromises(url).toPromise();
+   console.log(ayncData);
+   
   }
   //get Api call by passing ID:
    getApiById(){
@@ -83,6 +103,7 @@ ngAfterViewInit(){
       console.log(res);
       
     })
+    
   }
   deleteById(){
     let url =  this.url + '/' ;
@@ -91,6 +112,10 @@ ngAfterViewInit(){
       console.log(data);
       
     })
+  }
+
+  ngOnDestroy(){
+    this.subcribeProperty.unsubscribe();//unsubscription is important to avoid memory leakage problem.
   }
 }
 

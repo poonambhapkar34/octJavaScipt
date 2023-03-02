@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent {
+  @ViewChild(ChildComponent) propertyToFetchChildCompo! : ChildComponent;
   inputBoxValue :any;
   dataFromChild :any;
   
@@ -15,5 +17,12 @@ export class ParentComponent {
   }
   dataFetchingFromChild(data:any){
       this.dataFromChild = data;
+  }
+  ngAfterViewInit(){
+    this.propertyToFetchChildCompo.settingDataFromParent = 1005555;
+    console.log(this.propertyToFetchChildCompo.settingDataFromParent);
+   let childData = this.propertyToFetchChildCompo.updatedValue();
+   console.log( childData);
+   
   }
 }

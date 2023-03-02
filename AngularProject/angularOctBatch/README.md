@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+observable:It is contineously emmiting stream of data(responses:ack,token generation etc)observer method will observes responses .
+it will return stream of values or multiple values.
+eg.http,routing,event handling 
+promises eg: http : response will not changing continously in that case u can use promises instead of observable.
+it will return only single value(response)

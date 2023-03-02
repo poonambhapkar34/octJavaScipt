@@ -13,6 +13,7 @@ export class ChildComponent  {
  
  data = 'flower';
  showSubCompo =false;
+settingDataFromParent?: number =500 ;
 constructor(private dataService: DataService){
 
 }
@@ -27,7 +28,7 @@ constructor(private dataService: DataService){
  }
  ngOnInit(){
   console.log('oninit......');
- 
+  console.log('oninit..',this.settingDataFromParent)
  }
  subjectData(){
   
@@ -38,5 +39,8 @@ constructor(private dataService: DataService){
  ngDoCheck(){
   console.log('docheck...');
   
+ }
+ updatedValue(){
+  return this.settingDataFromParent;
  }
 }

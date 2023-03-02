@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiCallService {
-
+ 
  
 
  
@@ -24,6 +24,11 @@ export class ApiCallService {
    // console.log('url--->',url + this.slash + id);
     return this.httpClient.get(url + '/' + id);
   }
+  //get by promise
+  getApiByPromises(url:string) {
+    return this.httpClient.get(url)
+  }
+
   //post Api call
   postApiCall(url:string,formData:any) {
    return this.httpClient.post(url,formData);
