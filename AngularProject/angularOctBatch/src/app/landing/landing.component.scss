@@ -1,0 +1,21 @@
+::ng-deep .mat-checkbox-checked .mat-checkbox-background {
+    background-color: darkcyan !important;
+  }
+  ::ng-deep .mat-checkbox .mat-checkbox-frame {
+    border-color: violet;
+  }
+  .checkbox-change-clr{
+    color:yellow
+  }
+  ::ng-deep .mat-mdc-checkbox.checkbox-change-clr.mat-accent.mat-mdc-checkbox-checked 
+  .mdc-form-field .mdc-checkbox .mdc-checkbox__background{
+    background-color: rgb(114, 238, 5);
+  }
+  ::ng-deep .mdc-button.mdc-button--raised.mat-mdc-raised-button.mat-accent.mat-mdc-button-base .mat-mdc-button-persistent-ripple.mdc-button__ripple{
+    background-color: darkviolet;
+  }
+
+  ::ng-deep .mat-mdc-checkbox.mat-accent{
+    --mdc-checkbox-selected-hover-icon-color: yellow
+  }
+  

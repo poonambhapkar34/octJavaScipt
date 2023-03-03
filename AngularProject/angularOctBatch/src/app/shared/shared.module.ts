@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginformComponent } from '../loginform/loginform.component';
 import { FormsModule } from "@angular/forms";
 
+
 @NgModule({
   declarations: [
     NamevalidationDirective,
@@ -17,7 +18,8 @@ import { FormsModule } from "@angular/forms";
   imports: [
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
   exports:[ NamevalidationDirective,
     CurrencyPipe1,

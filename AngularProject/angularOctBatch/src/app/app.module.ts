@@ -8,10 +8,13 @@ import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { LandingComponent } from './landing/landing.component';
 import { AdminloginModule } from './adminlogin/adminlogin.module';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { CustomPipe } from './custom.pipe';
 //import { CurrencyPipe1 } from './currency1.pipe';
 // import { HttpClientModule } from '@angular/common/http';
  //imported formModule for ngModule
+ import {MatButtonModule} from '@angular/material/button';
+ import {MatCheckboxModule} from '@angular/material/checkbox';
 console.log('root module');
 
 @NgModule({
@@ -30,6 +33,9 @@ console.log('root module');
     AppRoutingModule,
     FormsModule,
     SharedModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule
     //HttpClientModule
     // AdminloginModule
   ],

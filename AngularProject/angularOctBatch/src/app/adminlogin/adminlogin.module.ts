@@ -11,6 +11,7 @@ import { NumbersonlyDirective } from './numbersonly.directive';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { SubjecttestComponent } from './subjecttest/subjecttest.component';
+import { MatButtonModule } from '@angular/material/button';
 
 console.log('admin module');
 
@@ -30,6 +31,7 @@ console.log('In admin module')
     CommonModule,
     AdminloginRoutingModule,
     FormsModule,
+    MatButtonModule,
     ReactiveFormsModule,
     SharedModule
   ],
