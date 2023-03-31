@@ -138,5 +138,34 @@
       "postId": 1
     }
   ],
-  "profile": {}
+  "profile": {},
+  "OwnerHotelDetails": [
+    {
+      "name": "Rajveer Patl",
+      "mob_No": 9856332335,
+      "password": "Raj@123",
+      "confirm_pass": "Raj@123",
+      "id": 1
+    },
+    {
+      "name": "Raj Patl",
+      "mob_No": 9856332335,
+      "password": "Raj@123",
+      "id":2
+    },
+    {
+      "name": "Poonam Patl",
+      "mob_No": 9856332335,
+      "password": "Raj@123",
+      "ownerName": "poonam",
+      "id": 3
+    },
+    {
+      "name": "Ram Patl",
+      "mob_No": 9856332335,
+      "password": "Raj@123",
+      "ownerName": "poonam",
+      "id": 4
+    }
+  ]
 }

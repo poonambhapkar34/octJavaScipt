@@ -15,6 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  //imported formModule for ngModule
  import {MatButtonModule} from '@angular/material/button';
  import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ModelComponent } from './model/model.component';
+import { ParentModelComponent } from './parent-model/parent-model.component';
+import {MatDialogModule} from '@angular/material/dialog';
 console.log('root module');
 
 @NgModule({
@@ -23,6 +26,8 @@ console.log('root module');
    // LoginformComponent,
     StudentloginComponent,
     LandingComponent,
+    ModelComponent,
+    ParentModelComponent,
    // CustomPipe,
    // CurrencyPipe1,
   
@@ -35,6 +40,7 @@ console.log('root module');
     SharedModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatDialogModule,
     MatCheckboxModule
     //HttpClientModule
     // AdminloginModule

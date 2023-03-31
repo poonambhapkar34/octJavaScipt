@@ -14,6 +14,7 @@ export class ApiCallService {
   constructor(public httpClient: HttpClient) { }
 
   getApi(url:string, slash?:any, id?:number) {
+   //Note: payload is nothing but request body of API
     //return this.httpClient.get(url); "http://localhost:3000/posts/12
     console.log('---->>',url + slash + id);
     return (slash == undefined && id == undefined)? this.httpClient.get(url)

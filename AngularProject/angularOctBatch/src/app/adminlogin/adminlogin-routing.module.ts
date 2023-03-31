@@ -9,6 +9,7 @@ import { SubjecttestComponent } from './subjecttest/subjecttest.component';
 
 const routes: Routes = [
   {path: '', component: AdminlandingComponent},
+  {path: 'adminLanding', component: AdminlandingComponent},
   {path: 'adminSignIn', component: AdminsigninComponent},
   {path : 'parent', component:ParentComponent},
   {path : 'parechildnt', component:ChildComponent},

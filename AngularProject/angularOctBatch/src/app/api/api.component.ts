@@ -63,6 +63,7 @@ ngAfterViewInit(){
       this.getDataByPromises = respo;
       console.log(respo);
     })
+    
   }
  async getApiUsingAsync(){
     let url = "http://localhost:3000/posts/";
